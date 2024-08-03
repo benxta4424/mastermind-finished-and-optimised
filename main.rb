@@ -1,8 +1,5 @@
-require "./lib/player_class"
-require "./lib/computer_class"
+require "./lib/game_class"
 
-#game=Player.new('Ben')
-#game.player_choose_colors
+new_game = Game.new
 
-computer=Computer.new
-computer.computer_pick_colors
+new_game.start_game_as_guesser

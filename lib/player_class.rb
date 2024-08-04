@@ -15,7 +15,8 @@ class Player
       index += 1
       puts
     end
-    puts colors
+    puts "Player colors:#{colors}"
+    colors
   end
 
   def player_guessing_colors

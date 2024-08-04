@@ -1,20 +1,13 @@
 require "./lib/player_class"
 require "./lib/computer_class"
 
-class Game
-  attr_accessor
-
+class GuessTheCode
   def initialize
     @turns = 0
     @correct_positions = []
     @corre_colors = []
     @player = Player.new
     @computer = Computer.new
-  end
-
-  def start_game_as_chooser
-    player = Player.new("Ben10")
-    player_colors = player.player_choose_colors
   end
 
   def start_game_as_guesser
@@ -31,11 +24,11 @@ class Game
       player_correctly_guessed_colors(computer_colors)
       puts
       puts
-      
-      if @correct_positions.size==4 
+
+      if @correct_positions.size == 4
         puts "You've won! Congratulations!"
         break
-      elsif @turns>12
+      elsif @turns > 12
         puts "You've lost! Better luck next time!"
         break
       end

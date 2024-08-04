@@ -1,3 +1,4 @@
+require "./lib/choose_the_code"
 class Computer
   def initialize
     @AVAILABLE_COLORS = %w[Red Blue Green Yellow Orange Purple]
@@ -9,7 +10,8 @@ class Computer
       sample_colors = @AVAILABLE_COLORS.sample
       computer_colors << sample_colors
     end
-
+    puts "Computer colors:#{computer_colors}"
     computer_colors
   end
+
 end

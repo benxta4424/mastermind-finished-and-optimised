@@ -13,5 +13,4 @@ class Computer
     puts "Computer colors:#{computer_colors}"
     computer_colors
   end
-
 end

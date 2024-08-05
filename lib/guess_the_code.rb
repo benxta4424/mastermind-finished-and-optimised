@@ -18,10 +18,12 @@ class GuessTheCode
 
     while @turns < 12 || @correct_positions.size < 4
       @correct_positions.clear
+      @turns += 1
       puts "Player you have to guess 4 colors:"
       puts
       player_correctly_guessed_positions(computer_colors)
       player_correctly_guessed_colors(computer_colors)
+      puts "You have guessed #{@turns} turns! You now have #{13 - @turns} turns left to guess!!"
       puts
       puts
 
@@ -50,7 +52,7 @@ class GuessTheCode
       end
     end
 
-    puts "You've got #{position_counter} positions right at indexes:#{@correct_positions}"
+    puts "You've got #{position_counter} positions right!"
     position_counter
   end
 
